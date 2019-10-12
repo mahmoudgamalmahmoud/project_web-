@@ -11,6 +11,17 @@ body {
     margin: 0px;
     padding: 0px;
   }
+   #bt
+  {
+height: 40px;
+background:  #999 ;
+margin: 20px;
+ border : 2px solid black;
+    
+    width: 300px;
+    color:white;
+    font-size:25px;
+  }
    #ih
   {
 
@@ -108,8 +119,9 @@ include ('database.php');
 $result=0; 
 if($_POST['submit']=="finish")
 {
+  
 
-for($n=1;$n<=5;$n++)
+for($n=1;$n<=$_SESSION['id'];$n++)
 {
 	if(!empty($_POST[$n]))
 	{
@@ -139,13 +151,13 @@ $q= "SELECT * FROM questions where id =? " ;
  ?>
  <div id='container'>
  <div style=" padding-top: 20px; color: black; font-size: 80px;  font-style: italic;  " > your result </div>
-<label>name  : </label>  <?php echo  $_SESSION['name']; ?>
-<br>
-<label>class : </label><?php echo $_SESSION['class'] ;?>
+
 <br>
 <label> result : </label><?php echo $result;?>
 
-<div >  <br><a href='start.html'> return to start page </a> </div>
+<div >  <form action="start.html">
+  <input id ="bt" type="submit" value="logout" name="submit" >
+</form> </div>
 
 
 

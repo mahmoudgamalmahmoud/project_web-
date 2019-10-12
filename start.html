@@ -67,7 +67,7 @@ padding:20px;
   {
     height: 10px;
     background-color: #191E22;
-    margin-bottom: 75px;
+    margin-bottom: 30px;
 
 
   }
@@ -91,6 +91,29 @@ word-spacing:3px;}
 
 
   }
+  label
+  {
+  font-size: 20px;
+
+  }
+  a{
+
+    
+    border: solid 1px #ccc;
+    font-size: 20px;
+    background: #EFEFEF ;
+    color :black;
+  padding: 10px;
+     
+font-style: italic;
+
+   }
+ #link 
+   {
+   text-align: left;
+  
+
+   }
   </style>
 <body>
  <div id="header" >
@@ -103,16 +126,21 @@ word-spacing:3px;}
   </div>
 <div id='container'>
 
-<form id="fr" action="main.php" method="post" >
-  <input  class ="in" id ="t1" placeholder=" enter your name  " type="text" name="txt1"  >
+<form id="fr" action="validate.php" method="POST" >
+<label>entre your email</label>
+<br>
+  <input  class ="in" id ="t1" placeholder=" enter your email  " type="text" name="email"  >
   <br>
-    <input  class ="in" id ="t1" placeholder=" enter your class  " type="text" name="txt2"  >
+  <label> entre your password</label>
+  <br>
+    <input  class ="in" id ="t1" placeholder=" enter your pass  " type="password" name="pass"  >
     <br>
     
 
-<input id ="bt" type="submit" value="start" name="submit" >
+<input id ="bt" type="submit" value="login" name="submit" >
 
 </form>
+<dir class="link"> <a href="register.html">register</a></dir>
 </div>
  <div id="e">
   </div>
